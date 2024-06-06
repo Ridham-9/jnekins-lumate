@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T18:22:02.834974" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Chrome Browser" owner="lumate1Resource">
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<msg time="2024-06-06T18:22:02.979693" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/usr/bin/chromedriver'.</msg>
+<arg>webdriver.chrome.driver</arg>
+<arg>${CHROME_DRIVER_PATH}</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="PASS" start="2024-06-06T18:22:02.979426" elapsed="0.000352"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T18:22:02.980280" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f626c57e310&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T18:22:02.979966" elapsed="0.000347"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T18:22:02.980455" elapsed="0.000189"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:22:02.981128" level="INFO">Opening browser 'chrome' to base url 'https://qa-pms.lumatehealth.com/'.</msg>
+<arg>${PMS_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-06T18:22:02.980871" elapsed="3.493334"/>
+</kw>
+<doc>Open Chrome browser with specific options</doc>
+<status status="PASS" start="2024-06-06T18:22:02.978333" elapsed="3.496390"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-06T18:22:06.476958" elapsed="0.102028"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:22:06.827058" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-84.png"&gt;&lt;img src="selenium-screenshot-84.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T18:22:06.580606" elapsed="0.246705"/>
+</kw>
+<msg time="2024-06-06T18:22:06.827578" level="FAIL">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</msg>
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-06T18:22:06.579515" elapsed="0.249016">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</status>
+</kw>
+<status status="FAIL" start="2024-06-06T18:22:02.977870" elapsed="3.850953">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T18:22:06.829519" elapsed="0.000091"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T18:22:06.830159" elapsed="0.163777"/>
+</kw>
+<tag>TC-PMS-001</tag>
+<status status="FAIL" start="2024-06-06T18:22:02.977083" elapsed="4.017249">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</status>
+</test>
+<test id="s1-t2" name="Verify that the user gets redirected to enter OTP page when entered the correct credentials." line="25">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Chrome Browser" owner="lumate1Resource">
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<msg time="2024-06-06T18:22:06.998470" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/usr/bin/chromedriver'.</msg>
+<arg>webdriver.chrome.driver</arg>
+<arg>${CHROME_DRIVER_PATH}</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="PASS" start="2024-06-06T18:22:06.998188" elapsed="0.000385"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T18:22:06.999207" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f626c3bba30&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T18:22:06.998807" elapsed="0.000439"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T18:22:06.999442" elapsed="0.000314"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:22:07.000474" level="INFO">Opening browser 'chrome' to base url 'https://qa-pms.lumatehealth.com/'.</msg>
+<arg>${PMS_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-06T18:22:07.000109" elapsed="3.827448"/>
+</kw>
+<doc>Open Chrome browser with specific options</doc>
+<status status="PASS" start="2024-06-06T18:22:06.997686" elapsed="3.830206"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-06T18:22:10.828384" elapsed="0.127200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:22:11.094682" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-85.png"&gt;&lt;img src="selenium-screenshot-85.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T18:22:10.959087" elapsed="0.136028"/>
+</kw>
+<msg time="2024-06-06T18:22:11.095945" level="FAIL">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</msg>
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-06T18:22:10.956915" elapsed="0.139671">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</status>
+</kw>
+<status status="FAIL" start="2024-06-06T18:22:06.997018" elapsed="4.099852">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T18:22:11.097722" elapsed="0.000093"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>Almost There</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" start="2024-06-06T18:22:11.098447" elapsed="0.000096"/>
+</kw>
+<tag>TC-PMS-005</tag>
+<status status="FAIL" start="2024-06-06T18:22:06.995327" elapsed="4.103617">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_class_name'</status>
+</test>
+<status status="FAIL" start="2024-06-06T18:22:02.835842" elapsed="8.264018"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC-PMS-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-005</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="lumateTest">lumateTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

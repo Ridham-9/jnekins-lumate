@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T18:30:26.624227" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Chrome Browser" owner="lumate1Resource">
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<msg time="2024-06-06T18:30:26.763070" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/usr/bin/chromedriver'.</msg>
+<arg>webdriver.chrome.driver</arg>
+<arg>${CHROME_DRIVER_PATH}</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="PASS" start="2024-06-06T18:30:26.762839" elapsed="0.000308"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T18:30:26.763633" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fbe5bb03c70&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T18:30:26.763328" elapsed="0.000338"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T18:30:26.763818" elapsed="0.000178"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:30:26.764480" level="INFO">Opening browser 'chrome' to base url 'https://qa-pms.lumatehealth.com/'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:30:27.791714" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T18:30:27.789384" elapsed="0.002777"/>
+</kw>
+<msg time="2024-06-06T18:30:27.792978" level="FAIL">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</msg>
+<arg>${PMS_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-06T18:30:26.764223" elapsed="1.034894">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</kw>
+<doc>Open Chrome browser with specific options</doc>
+<status status="FAIL" start="2024-06-06T18:30:26.761822" elapsed="1.038126">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T18:30:27.800856" elapsed="0.000157"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T18:30:27.801630" elapsed="0.000137"/>
+</kw>
+<status status="FAIL" start="2024-06-06T18:30:26.761421" elapsed="1.040856">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T18:30:27.804283" elapsed="0.000217"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T18:30:27.805990" elapsed="0.000473"/>
+</kw>
+<tag>TC-PMS-001</tag>
+<status status="FAIL" start="2024-06-06T18:30:26.760465" elapsed="1.046289">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</test>
+<test id="s1-t2" name="Verify that the user gets redirected to enter OTP page when entered the correct credentials." line="25">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Chrome Browser" owner="lumate1Resource">
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<msg time="2024-06-06T18:30:27.812832" level="INFO">Environment variable 'webdriver.chrome.driver' set to value '/usr/bin/chromedriver'.</msg>
+<arg>webdriver.chrome.driver</arg>
+<arg>${CHROME_DRIVER_PATH}</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="PASS" start="2024-06-06T18:30:27.812397" elapsed="0.000574"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T18:30:27.814033" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fbe5b9ec5b0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T18:30:27.813361" elapsed="0.000747"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T18:30:27.814480" elapsed="0.000459"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:30:27.816182" level="INFO">Opening browser 'chrome' to base url 'https://qa-pms.lumatehealth.com/'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:30:28.838369" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T18:30:28.836410" elapsed="0.002367"/>
+</kw>
+<msg time="2024-06-06T18:30:28.839524" level="FAIL">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</msg>
+<arg>${PMS_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-06T18:30:27.815425" elapsed="1.026649">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</kw>
+<doc>Open Chrome browser with specific options</doc>
+<status status="FAIL" start="2024-06-06T18:30:27.811689" elapsed="1.031144">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T18:30:28.843622" elapsed="0.000148"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T18:30:28.844439" elapsed="0.000143"/>
+</kw>
+<status status="FAIL" start="2024-06-06T18:30:27.810830" elapsed="1.034208">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T18:30:28.846627" elapsed="0.000187"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>Almost There</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" start="2024-06-06T18:30:28.847873" elapsed="0.000182"/>
+</kw>
+<tag>TC-PMS-005</tag>
+<status status="FAIL" start="2024-06-06T18:30:27.808265" elapsed="1.041126">ValueError: Timeout value connect was &lt;object object at 0x7fbe5ce98270&gt;, but it must be an int, float or None.</status>
+</test>
+<status status="FAIL" start="2024-06-06T18:30:26.625106" elapsed="2.228799"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC-PMS-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-005</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="lumateTest">lumateTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

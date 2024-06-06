@@ -55,6 +55,7 @@ Enter OTP and Submit it
 #    Input Text    ${OTP_P_PORTAL}    ${otp}
 #    Click Element                        ${OTP_P_PORTAL}
 #    CustomKeywords.Paste From Clipboard
+    Wait Until Element Is Enabled        ${VALIDATE_OTP}
     Click Element                        ${VALIDATE_OTP}
     Wait Until Element Is Visible        ${SELECT_DEPENDENT}    15s
     ${home}=    Run Keyword And Return Status    Page Should Not Contain    Please select any one dependent to proceed further
