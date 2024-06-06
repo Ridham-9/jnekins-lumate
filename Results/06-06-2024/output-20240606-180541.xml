@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T18:05:41.338804" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:05:41.487294" level="INFO">Opening browser 'chrome' to base url 'https://qa-pms.lumatehealth.com/'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:05:41.490626" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T18:05:41.490439" elapsed="0.000255"/>
+</kw>
+<msg time="2024-06-06T18:05:41.490848" level="FAIL">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</msg>
+<arg>${PMS_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-06T18:05:41.486855" elapsed="0.014046">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T18:05:41.501175" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T18:05:41.501350" elapsed="0.000028"/>
+</kw>
+<status status="FAIL" start="2024-06-06T18:05:41.485318" elapsed="0.016198">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T18:05:41.501839" elapsed="0.000042"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T18:05:41.502187" elapsed="0.000156"/>
+</kw>
+<tag>TC-PMS-001</tag>
+<status status="FAIL" start="2024-06-06T18:05:41.484384" elapsed="0.018070">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</status>
+</test>
+<test id="s1-t2" name="Verify that the user gets redirected to enter OTP page when entered the correct credentials." line="25">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:05:41.503988" level="INFO">Opening browser 'chrome' to base url 'https://qa-pms.lumatehealth.com/'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T18:05:41.504875" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T18:05:41.504692" elapsed="0.000270"/>
+</kw>
+<msg time="2024-06-06T18:05:41.505089" level="FAIL">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</msg>
+<arg>${PMS_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${CHROME_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-06T18:05:41.503675" elapsed="0.001609">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T18:05:41.505512" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T18:05:41.505688" elapsed="0.000030"/>
+</kw>
+<status status="FAIL" start="2024-06-06T18:05:41.503342" elapsed="0.002507">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T18:05:41.506239" elapsed="0.000067"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>Almost There</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" start="2024-06-06T18:05:41.506632" elapsed="0.000063"/>
+</kw>
+<tag>TC-PMS-005</tag>
+<status status="FAIL" start="2024-06-06T18:05:41.502838" elapsed="0.004162">ValueError: Unable to parse option: "--headless --no-sandbox --disable-dev-shm-usage --disable-gpu --remote-debugging-port=9222 --disable-software-rasterizer --no-first-run --disable-background-networking --disable-extensions disable-features=VizDisplayCompositor executable_path=/usr/bin/chromedriver"</status>
+</test>
+<status status="FAIL" start="2024-06-06T18:05:41.339753" elapsed="0.167842"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC-PMS-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-005</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="lumateTest">lumateTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
