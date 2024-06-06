@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T13:02:08.153605" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser With Options" owner="lumate1Resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T13:02:08.291779" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fb946184df0&gt;</msg>
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.291414" elapsed="0.000413"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-06T13:02:08.292313" level="INFO">${options_list} = ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--remote-debugging-port=9222', '--disable-software-rasterizer', '--no-first-run', '--disable-background-networking', '--disa...</msg>
+<var>${options_list}</var>
+<arg>${options}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.292032" elapsed="0.000319"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.292761" elapsed="0.000190"/>
+</kw>
+<var name="${option}">--headless</var>
+<status status="PASS" start="2024-06-06T13:02:08.292625" elapsed="0.000384"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.293242" elapsed="0.000185"/>
+</kw>
+<var name="${option}">--no-sandbox</var>
+<status status="PASS" start="2024-06-06T13:02:08.293118" elapsed="0.000364"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.293691" elapsed="0.000178"/>
+</kw>
+<var name="${option}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2024-06-06T13:02:08.293579" elapsed="0.000346"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.294145" elapsed="0.000195"/>
+</kw>
+<var name="${option}">--disable-gpu</var>
+<status status="PASS" start="2024-06-06T13:02:08.294027" elapsed="0.000373"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.294610" elapsed="0.000179"/>
+</kw>
+<var name="${option}">--remote-debugging-port=9222</var>
+<status status="PASS" start="2024-06-06T13:02:08.294500" elapsed="0.000345"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.295046" elapsed="0.000168"/>
+</kw>
+<var name="${option}">--disable-software-rasterizer</var>
+<status status="PASS" start="2024-06-06T13:02:08.294940" elapsed="0.000333"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.295494" elapsed="0.000173"/>
+</kw>
+<var name="${option}">--no-first-run</var>
+<status status="PASS" start="2024-06-06T13:02:08.295372" elapsed="0.000350"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.295927" elapsed="0.000179"/>
+</kw>
+<var name="${option}">--disable-background-networking</var>
+<status status="PASS" start="2024-06-06T13:02:08.295818" elapsed="0.000345"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.296371" elapsed="0.000190"/>
+</kw>
+<var name="${option}">--disable-extensions</var>
+<status status="PASS" start="2024-06-06T13:02:08.296260" elapsed="0.000357"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:02:08.296829" elapsed="0.000175"/>
+</kw>
+<var name="${option}">disable-features=VizDisplayCompositor</var>
+<status status="PASS" start="2024-06-06T13:02:08.296718" elapsed="0.000341"/>
+</iter>
+<var>${option}</var>
+<value>@{options_list}</value>
+<status status="PASS" start="2024-06-06T13:02:08.292451" elapsed="0.004650"/>
+</for>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:02:08.297463" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:03:09.900810" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.899242" elapsed="0.001868"/>
+</kw>
+<msg time="2024-06-06T13:03:09.901659" level="FAIL">WebDriverException: Message: chrome not reachable
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2024-06-06T13:02:08.297257" elapsed="61.606178">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:03:09.903955" elapsed="0.000086"/>
+</kw>
+<arg>${PMS_URL}</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<status status="FAIL" start="2024-06-06T13:02:08.290221" elapsed="61.614202">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T13:03:09.904832" elapsed="0.000080"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:03:09.905192" elapsed="0.000056"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:02:08.289691" elapsed="61.615750">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:03:09.906184" elapsed="0.000097"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.907197" elapsed="0.000474"/>
+</kw>
+<tag>TC-PMS-001</tag>
+<status status="FAIL" start="2024-06-06T13:02:08.288847" elapsed="61.619120">WebDriverException: Message: chrome not reachable
+</status>
+</test>
+<test id="s1-t2" name="Verify that the user gets redirected to enter OTP page when entered the correct credentials." line="25">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser With Options" owner="lumate1Resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T13:03:09.913585" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fb9460c2700&gt;</msg>
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.912815" elapsed="0.000863"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-06T13:03:09.914711" level="INFO">${options_list} = ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--remote-debugging-port=9222', '--disable-software-rasterizer', '--no-first-run', '--disable-background-networking', '--disa...</msg>
+<var>${options_list}</var>
+<arg>${options}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.914189" elapsed="0.000577"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.915727" elapsed="0.000653"/>
+</kw>
+<var name="${option}">--headless</var>
+<status status="PASS" start="2024-06-06T13:03:09.915217" elapsed="0.001326"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.916964" elapsed="0.000517"/>
+</kw>
+<var name="${option}">--no-sandbox</var>
+<status status="PASS" start="2024-06-06T13:03:09.916750" elapsed="0.000878"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.918014" elapsed="0.000280"/>
+</kw>
+<var name="${option}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2024-06-06T13:03:09.917815" elapsed="0.000559"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.918663" elapsed="0.000267"/>
+</kw>
+<var name="${option}">--disable-gpu</var>
+<status status="PASS" start="2024-06-06T13:03:09.918512" elapsed="0.000497"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.919300" elapsed="0.000243"/>
+</kw>
+<var name="${option}">--remote-debugging-port=9222</var>
+<status status="PASS" start="2024-06-06T13:03:09.919150" elapsed="0.000474"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.919985" elapsed="0.000267"/>
+</kw>
+<var name="${option}">--disable-software-rasterizer</var>
+<status status="PASS" start="2024-06-06T13:03:09.919759" elapsed="0.000563"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.920580" elapsed="0.000215"/>
+</kw>
+<var name="${option}">--no-first-run</var>
+<status status="PASS" start="2024-06-06T13:03:09.920445" elapsed="0.000423"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.921146" elapsed="0.000210"/>
+</kw>
+<var name="${option}">--disable-background-networking</var>
+<status status="PASS" start="2024-06-06T13:03:09.921012" elapsed="0.000411"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.921676" elapsed="0.000211"/>
+</kw>
+<var name="${option}">--disable-extensions</var>
+<status status="PASS" start="2024-06-06T13:03:09.921544" elapsed="0.000413"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:03:09.922234" elapsed="0.000211"/>
+</kw>
+<var name="${option}">disable-features=VizDisplayCompositor</var>
+<status status="PASS" start="2024-06-06T13:03:09.922098" elapsed="0.000414"/>
+</iter>
+<var>${option}</var>
+<value>@{options_list}</value>
+<status status="PASS" start="2024-06-06T13:03:09.914953" elapsed="0.007615"/>
+</for>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:03:09.922990" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:11.536819" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:11.535910" elapsed="0.001081"/>
+</kw>
+<msg time="2024-06-06T13:04:11.537330" level="FAIL">WebDriverException: Message: chrome not reachable
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2024-06-06T13:03:09.922750" elapsed="61.614954">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:11.538081" elapsed="0.000062"/>
+</kw>
+<arg>${PMS_URL}</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<status status="FAIL" start="2024-06-06T13:03:09.911248" elapsed="61.627143">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:11.538696" elapsed="0.000058"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:11.539014" elapsed="0.000055"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:03:09.910548" elapsed="61.628718">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:04:11.539964" elapsed="0.000083"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>Almost There</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:11.540423" elapsed="0.000067"/>
+</kw>
+<tag>TC-PMS-005</tag>
+<status status="FAIL" start="2024-06-06T13:03:09.909394" elapsed="61.631564">WebDriverException: Message: chrome not reachable
+</status>
+</test>
+<test id="s1-t3" name="Verify the clinician Home Page" line="31">
+<kw name="Enter OTP and Submit it" owner="lumate1Resource">
+<kw name="Wait for OTP Email" owner="lumate1Resource">
+<kw name="Open Mailbox" owner="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" start="2024-06-06T13:04:11.544548" elapsed="1.709856"/>
+</kw>
+<kw name="Wait For Email" owner="ImapLibrary2">
+<msg time="2024-06-06T13:04:13.981484" level="INFO">${email_index} = 39945</msg>
+<var>${email_index}</var>
+<arg>sender=${SENDER_USERNAME}</arg>
+<arg>status=UNSEEN</arg>
+<arg>timeout=300</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<status status="PASS" start="2024-06-06T13:04:13.255281" elapsed="0.726399"/>
+</kw>
+<kw name="Get Email Body" owner="ImapLibrary2">
+<msg time="2024-06-06T13:04:14.483034" level="INFO">${email_body} = &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" lang="en"&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/htm...</msg>
+<var>${email_body}</var>
+<arg>${email_index}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<status status="PASS" start="2024-06-06T13:04:13.982545" elapsed="0.500675"/>
+</kw>
+<kw name="Get Regexp Matches" owner="String">
+<msg time="2024-06-06T13:04:14.487606" level="INFO">${otp} = ['353454', '000000', '353454', '946171', '353454', '353454', '000000', '353454', '353454', '353454', '353454', '353454', '353454', '353454', '353454', '353454', '353454']</msg>
+<var>${otp}</var>
+<arg>${email_body}</arg>
+<arg>\\b\\d{6}\\b</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<status status="PASS" start="2024-06-06T13:04:14.484046" elapsed="0.003775"/>
+</kw>
+<kw name="Delete Email" owner="ImapLibrary2">
+<arg>${email_index}</arg>
+<doc>Delete email on given ``email_index``.</doc>
+<status status="PASS" start="2024-06-06T13:04:14.488717" elapsed="0.839791"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-06T13:04:15.330185" level="INFO">OTP received: ['353454', '000000', '353454', '946171', '353454', '353454', '000000', '353454', '353454', '353454', '353454', '353454', '353454', '353454', '353454', '353454', '353454']</msg>
+<arg>OTP received: ${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.329357" elapsed="0.001079"/>
+</kw>
+<return>
+<value>${otp}[3]</value>
+<status status="PASS" start="2024-06-06T13:04:15.330779" elapsed="0.000245"/>
+</return>
+<msg time="2024-06-06T13:04:15.331739" level="INFO">${otp} = 946171</msg>
+<var>${otp}</var>
+<status status="PASS" start="2024-06-06T13:04:11.543767" elapsed="3.788102"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.334869" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.334376" elapsed="0.000731"/>
+</kw>
+<msg time="2024-06-06T13:04:15.335543" level="FAIL">No browser is open.</msg>
+<arg>${OTP_CLICK}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.332609" elapsed="0.004659">No browser is open.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${OTP_CLICK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.338079" elapsed="0.000153"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.338851" elapsed="0.000137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${OTP_PMS}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.339580" elapsed="0.000132"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${OTP_PMS}</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.340422" elapsed="0.000155"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${VALIDATE_OTP_PMS}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.341163" elapsed="0.000131"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.341849" elapsed="0.000130"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${error_exists}</var>
+<arg>Page Should Contain</arg>
+<arg>Incorrect OTP is provided. Try resending OTP.</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.342662" elapsed="0.000133"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${error_exists}</arg>
+<arg>Enter OTP And Submit It</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.343438" elapsed="0.000129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOMEPAGE_PMS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.344206" elapsed="0.000138"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:04:11.542678" elapsed="3.802124">No browser is open.</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TO-DO_HOME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.345835" elapsed="0.000163"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${TO-DO_HOME}</arg>
+<arg>TO DO's</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.346910" elapsed="0.000152"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${APPOINTMENT_HOME}</arg>
+<arg>Appointments</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.347913" elapsed="0.000147"/>
+</kw>
+<tag>TC-APP-001</tag>
+<status status="FAIL" start="2024-06-06T13:04:11.541610" elapsed="3.807246">No browser is open.</status>
+</test>
+<test id="s1-t4" name="Verify the Calender &amp; appointments screen" line="38">
+<kw name="Wait Until the Update Icon Disappear" owner="lumate1Resource">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.355493" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.354997" elapsed="0.000744"/>
+</kw>
+<msg time="2024-06-06T13:04:15.356159" level="FAIL">No browser is open.</msg>
+<arg>${UpdateIcon}</arg>
+<arg>${TIMEOUT_40}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.353514" elapsed="0.003141">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2024-06-06T13:04:15.352301" elapsed="0.004728">No browser is open.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${sidemenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.357667" elapsed="0.000191"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${APPOINTMENT_SEC}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.358481" elapsed="0.000128"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${APPOINTMENT_SEC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:04:15.359191" elapsed="0.000094"/>
+</kw>
+<kw name="Wait Until the Update Icon Disappear" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:04:15.360163" elapsed="0.000132"/>
+</kw>
+<kw name="verify elements of TC-APP-002 visible or not" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:04:15.361026" elapsed="0.000131"/>
+</kw>
+<kw name="Wait Until the Update Icon Disappear" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:04:15.361759" elapsed="0.000106"/>
+</kw>
+<tag>TC-APP-002</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.350090" elapsed="0.012275">No browser is open.</status>
+</test>
+<test id="s1-t5" name="Verify the create an appointment button" line="48">
+<kw name="Click Element" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T13:04:15.364661" level="INFO">Clicking element 'xpath://*[@class="menu overflow-hidden"]/ul/div[1]/li[3]'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.365144" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.364964" elapsed="0.000267"/>
+</kw>
+<msg time="2024-06-06T13:04:15.365395" level="FAIL">No browser is open.</msg>
+<arg>${HOME_SEC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.364226" elapsed="0.001718">No browser is open.</status>
+</kw>
+<tag>TC-APP-003</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.363112" elapsed="0.003164">Setup failed:
+No browser is open.</status>
+</test>
+<test id="s1-t6" name="Verify View Patient" line="53">
+<kw name="Click Element" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T13:04:15.368210" level="INFO">Clicking element 'xpath://*[@class="menu overflow-hidden"]/ul/div[1]/li[3]'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.368904" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.368647" elapsed="0.000380"/>
+</kw>
+<msg time="2024-06-06T13:04:15.369242" level="FAIL">No browser is open.</msg>
+<arg>${HOME_SEC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.367720" elapsed="0.001803">No browser is open.</status>
+</kw>
+<tag>TC-PCV-001</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.366832" elapsed="0.003112">Setup failed:
+No browser is open.</status>
+</test>
+<test id="s1-t7" name="Verify Edit Patient" line="59">
+<kw name="Click Element" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T13:04:15.371898" level="INFO">Clicking element 'xpath://*[@class="menu overflow-hidden"]/ul/div[1]/li[3]'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.372563" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.372301" elapsed="0.000384"/>
+</kw>
+<msg time="2024-06-06T13:04:15.372878" level="FAIL">No browser is open.</msg>
+<arg>${HOME_SEC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.371494" elapsed="0.001623">No browser is open.</status>
+</kw>
+<tag>TC-PCV-002</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.370577" elapsed="0.002876">Setup failed:
+No browser is open.</status>
+</test>
+<test id="s1-t8" name="Verify the Basic details screen given under the Demographic section" line="68">
+<kw name="Click Element" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T13:04:15.375128" level="INFO">Clicking element 'xpath://*[@class="menu overflow-hidden"]/ul/div[1]/li[3]'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.375680" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.375488" elapsed="0.000264"/>
+</kw>
+<msg time="2024-06-06T13:04:15.375889" level="FAIL">No browser is open.</msg>
+<arg>${HOME_SEC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.374708" elapsed="0.001353">No browser is open.</status>
+</kw>
+<tag>TC-PCV-003</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.373826" elapsed="0.002595">Setup failed:
+No browser is open.</status>
+</test>
+<test id="s1-t9" name="Verify billing tab" line="77">
+<kw name="Click Element" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T13:04:15.378156" level="INFO">Clicking element 'xpath://*[@class="menu overflow-hidden"]/ul/div[1]/li[3]'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.378851" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.378590" elapsed="0.000370"/>
+</kw>
+<msg time="2024-06-06T13:04:15.379167" level="FAIL">No browser is open.</msg>
+<arg>${HOME_SEC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.377687" elapsed="0.001748">No browser is open.</status>
+</kw>
+<tag>TC-PCV-004</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.376971" elapsed="0.002978">Setup failed:
+No browser is open.</status>
+</test>
+<test id="s1-t10" name="Change billing status" line="89">
+<kw name="Click Element" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T13:04:15.382187" level="INFO">Clicking element 'xpath://*[@class="menu overflow-hidden"]/ul/div[1]/li[2]'.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.382692" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.382499" elapsed="0.000278"/>
+</kw>
+<msg time="2024-06-06T13:04:15.382937" level="FAIL">No browser is open.</msg>
+<arg>${HOME_SEC_ICON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.381537" elapsed="0.001602">No browser is open.</status>
+</kw>
+<tag>TC-PCV-005</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.380761" elapsed="0.002739">Setup failed:
+No browser is open.</status>
+</test>
+<test id="s1-t11" name="Verify patient signup" line="103">
+<kw name="Open LUMCARE url on browser" owner="lumate2Resource">
+<kw name="Open Browser With Options" owner="lumate2Resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T13:04:15.386591" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fb94607cbb0&gt;</msg>
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.386218" elapsed="0.000443"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-06T13:04:15.387220" level="INFO">${options_list} = ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--remote-debugging-port=9222', '--disable-software-rasterizer', '--no-first-run', '--disable-background-networking', '--disa...</msg>
+<var>${options_list}</var>
+<arg>${options}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.386901" elapsed="0.000411"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.387860" elapsed="0.000283"/>
+</kw>
+<var name="${option}">--headless</var>
+<status status="PASS" start="2024-06-06T13:04:15.387675" elapsed="0.000560"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.388573" elapsed="0.000257"/>
+</kw>
+<var name="${option}">--no-sandbox</var>
+<status status="PASS" start="2024-06-06T13:04:15.388394" elapsed="0.000523"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.389216" elapsed="0.000248"/>
+</kw>
+<var name="${option}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2024-06-06T13:04:15.389053" elapsed="0.000496"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.389846" elapsed="0.000249"/>
+</kw>
+<var name="${option}">--disable-gpu</var>
+<status status="PASS" start="2024-06-06T13:04:15.389685" elapsed="0.000495"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.390478" elapsed="0.000326"/>
+</kw>
+<var name="${option}">--remote-debugging-port=9222</var>
+<status status="PASS" start="2024-06-06T13:04:15.390314" elapsed="0.000632"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.391441" elapsed="0.000346"/>
+</kw>
+<var name="${option}">--disable-software-rasterizer</var>
+<status status="PASS" start="2024-06-06T13:04:15.391165" elapsed="0.000730"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.392337" elapsed="0.000377"/>
+</kw>
+<var name="${option}">--no-first-run</var>
+<status status="PASS" start="2024-06-06T13:04:15.392117" elapsed="0.000707"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.393231" elapsed="0.000329"/>
+</kw>
+<var name="${option}">--disable-background-networking</var>
+<status status="PASS" start="2024-06-06T13:04:15.393023" elapsed="0.000632"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.393991" elapsed="0.000274"/>
+</kw>
+<var name="${option}">--disable-extensions</var>
+<status status="PASS" start="2024-06-06T13:04:15.393810" elapsed="0.000543"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:04:15.394702" elapsed="0.000308"/>
+</kw>
+<var name="${option}">disable-features=VizDisplayCompositor</var>
+<status status="PASS" start="2024-06-06T13:04:15.394514" elapsed="0.000589"/>
+</iter>
+<var>${option}</var>
+<value>@{options_list}</value>
+<status status="PASS" start="2024-06-06T13:04:15.387449" elapsed="0.007748"/>
+</for>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:04:15.395907" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:05:17.007058" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:05:17.006051" elapsed="0.001216"/>
+</kw>
+<msg time="2024-06-06T13:05:17.007684" level="FAIL">WebDriverException: Message: chrome not reachable
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2024-06-06T13:04:15.395492" elapsed="61.612687">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.008644" elapsed="0.000080"/>
+</kw>
+<arg>${P_PORTAL_URL}</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<status status="FAIL" start="2024-06-06T13:04:15.385556" elapsed="61.623493">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.009439" elapsed="0.000074"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_P_PORTAL}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.009848" elapsed="0.000070"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:04:15.384820" elapsed="61.625353">WebDriverException: Message: chrome not reachable
+</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate2Resource">
+<status status="NOT RUN" start="2024-06-06T13:05:17.011614" elapsed="0.000108"/>
+</kw>
+<kw name="Enter OTP and Submit it" owner="lumate2Resource">
+<status status="NOT RUN" start="2024-06-06T13:05:17.012480" elapsed="0.000144"/>
+</kw>
+<kw name="Select Dependent and Skip profile editing" owner="lumate2Resource">
+<status status="NOT RUN" start="2024-06-06T13:05:17.013349" elapsed="0.000104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOMEPAGE_P_PORTAL}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.014084" elapsed="0.000129"/>
+</kw>
+<tag>TC-PATIENT-001</tag>
+<tag>test:retry(2)</tag>
+<status status="FAIL" start="2024-06-06T13:04:15.384008" elapsed="61.631065">WebDriverException: Message: chrome not reachable
+</status>
+</test>
+<test id="s1-t12" name="Add consent forms" line="111">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:05:17.018472" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:05:17.018194" elapsed="0.000392"/>
+</kw>
+<msg time="2024-06-06T13:05:17.018792" level="FAIL">No browser is open.</msg>
+<arg>${VIEW_CONSENT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-06T13:05:17.017238" elapsed="0.001933">No browser is open.</status>
+</kw>
+<kw name="Wait Until the Update Icon Disappear" owner="lumate2Resource">
+<status status="NOT RUN" start="2024-06-06T13:05:17.019691" elapsed="0.000067"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${VIEW_CONSENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.020140" elapsed="0.000061"/>
+</kw>
+<kw name="Wait Until the Update Icon Disappear" owner="lumate2Resource">
+<status status="NOT RUN" start="2024-06-06T13:05:17.020563" elapsed="0.000061"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${CONSENTS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.020907" elapsed="0.000052"/>
+</kw>
+<tag>TC-PATIENT-002</tag>
+<status status="FAIL" start="2024-06-06T13:05:17.015973" elapsed="0.005315">No browser is open.</status>
+</test>
+<test id="s1-t13" name="Bill payment" line="119">
+<kw name="Wait Until the Update Icon Disappear" owner="lumate2Resource">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:05:17.023655" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:05:17.023473" elapsed="0.000276"/>
+</kw>
+<msg time="2024-06-06T13:05:17.023910" level="FAIL">No browser is open.</msg>
+<arg>${UpdateIcon}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="FAIL" start="2024-06-06T13:05:17.022874" elapsed="0.001332">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2024-06-06T13:05:17.022355" elapsed="0.002141">No browser is open.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${HOME_SECTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.024816" elapsed="0.000051"/>
+</kw>
+<kw name="Payment Of Clinician1" owner="lumate2Resource">
+<status status="NOT RUN" start="2024-06-06T13:05:17.025215" elapsed="0.000054"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-06-06T13:05:17.025505" elapsed="0.000046"/>
+</kw>
+<tag>TC-PATIENT-003</tag>
+<status status="FAIL" start="2024-06-06T13:05:17.021666" elapsed="0.004163">No browser is open.</status>
+</test>
+<status status="FAIL" start="2024-06-06T13:02:08.154465" elapsed="188.872104"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="13" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC-APP-001</stat>
+<stat pass="0" fail="1" skip="0">TC-APP-002</stat>
+<stat pass="0" fail="1" skip="0">TC-APP-003</stat>
+<stat pass="0" fail="1" skip="0">TC-PATIENT-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PATIENT-002</stat>
+<stat pass="0" fail="1" skip="0">TC-PATIENT-003</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-002</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-003</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-004</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-005</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-005</stat>
+<stat pass="0" fail="1" skip="0">test:retry(2)</stat>
+</tag>
+<suite>
+<stat pass="0" fail="13" skip="0" id="s1" name="lumateTest">lumateTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

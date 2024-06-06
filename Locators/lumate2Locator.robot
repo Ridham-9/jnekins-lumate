@@ -5,7 +5,7 @@ ${Browser}                       chrome
 ${TIMEOUT}                       30s
 ${TIMEOUT_40}                    40s
 ${CHROME_OPTIONS}                --headless    --no-sandbox    --disable-dev-shm-usage    --disable-gpu    --remote-debugging-port=9222    --disable-software-rasterizer    --no-first-run    --disable-background-networking    --disable-extensions    disable-features=VizDisplayCompositor
-#${CHROME_OPTIONS}                --no-sandbox    --disable-dev-shm-usage    --headless
+${CHROME_DRIVER_PATH}            /usr/bin/chromedriver
 ${P_PORTAL_URL}                  https://qa-lumacare.lumatehealth.com/#/authentication/login
 ${USERNAME_P_PORTAL}             robert.grigsby
 ${PASSWORD_P_PORTAL}             Test1234!

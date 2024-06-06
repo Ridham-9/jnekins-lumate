@@ -12,21 +12,28 @@ Resource   ../Locators/lumate2Locator.robot
 *** Keywords ***
 
 Open LUMCARE url on browser
-    Open Browser With Options    ${P_PORTAL_URL}    ${CHROME_OPTIONS}
+#    Open Browser With Options    ${P_PORTAL_URL}    ${CHROME_OPTIONS}
+    Open Chrome Browser
     Maximize Browser Window
     Wait Until Element Is Visible    ${LOGIN_PAGE_P_PORTAL}    15s
 
 
-Open Browser With Options
-    [Arguments]    ${url}    ${options}
-    ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    ${options_list}=    Split String    ${options}    ${SPACE}
-    FOR    ${option}    IN    @{options_list}
-        Call Method    ${chrome options}    add_argument    ${option}
-    END
-    Create WebDriver    Chrome    options=${chrome options}
-    Go To    ${url}
+#Open Browser With Options
+#    [Arguments]    ${url}    ${options}
+#    ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+#    ${options_list}=    Split String    ${options}    ${SPACE}
+#    FOR    ${option}    IN    @{options_list}
+#        Call Method    ${chrome options}    add_argument    ${option}
+#    END
+#    Create WebDriver    Chrome    options=${chrome options}
+#    Go To    ${url}
 
+Open Chrome Browser
+    [Documentation]    Open Chrome browser with specific options
+    Set Environment Variable    webdriver.chrome.driver    ${CHROME_DRIVER_PATH}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    ${CHROME_OPTIONS}
+    Open Browser    ${P_PORTAL_URL}    chrome    options=${options}
 
 
 Fill the credentials and login
@@ -40,9 +47,13 @@ Enter OTP and Submit it
     ${otp}=  Wait for OTP Email
 #    CustomKeywords.Copy To Clipboard     ${otp}
     wait until element is enabled        ${OTP_P_PORTAL}    ${TIMEOUT}
-    Input Text    ${OTP_P_PORTAL}    ${otp}
+#    Input Text    ${OTP_P_PORTAL}    ${otp}
 #    Press Keys                           ${OTP_P_PORTAL}    CTRL+V
-    Click Element                        ${OTP_P_PORTAL}
+    FOR    ${i}    IN RANGE    1    7
+        Input Text    ${OTP_P_PORTAL}/input[${i}]    ${otp}[${i-1}]
+    END
+#    Input Text    ${OTP_P_PORTAL}    ${otp}
+#    Click Element                        ${OTP_P_PORTAL}
 #    CustomKeywords.Paste From Clipboard
     Click Element                        ${VALIDATE_OTP}
     Wait Until Element Is Visible        ${SELECT_DEPENDENT}    15s

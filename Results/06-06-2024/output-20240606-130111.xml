@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T13:01:11.975432" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser With Options" owner="lumate1Resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T13:01:12.196209" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fb9a7eaadf0&gt;</msg>
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.195567" elapsed="0.000719"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-06T13:01:12.196943" level="INFO">${options_list} = ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--remote-debugging-port=9222', '--disable-software-rasterizer', '--no-first-run', '--disable-background-networking', '--disa...</msg>
+<var>${options_list}</var>
+<arg>${options}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.196587" elapsed="0.000401"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.197800" elapsed="0.000321"/>
+</kw>
+<var name="${option}">--headless</var>
+<status status="PASS" start="2024-06-06T13:01:12.197545" elapsed="0.000670"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.198553" elapsed="0.000309"/>
+</kw>
+<var name="${option}">--no-sandbox</var>
+<status status="PASS" start="2024-06-06T13:01:12.198380" elapsed="0.000599"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.199335" elapsed="0.000274"/>
+</kw>
+<var name="${option}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2024-06-06T13:01:12.199142" elapsed="0.000550"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.200007" elapsed="0.000345"/>
+</kw>
+<var name="${option}">--disable-gpu</var>
+<status status="PASS" start="2024-06-06T13:01:12.199834" elapsed="0.000619"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.200836" elapsed="0.000351"/>
+</kw>
+<var name="${option}">--remote-debugging-port=9222</var>
+<status status="PASS" start="2024-06-06T13:01:12.200639" elapsed="0.000673"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.201875" elapsed="0.000448"/>
+</kw>
+<var name="${option}">--disable-software-rasterizer</var>
+<status status="PASS" start="2024-06-06T13:01:12.201535" elapsed="0.000923"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.202913" elapsed="0.000451"/>
+</kw>
+<var name="${option}">--no-first-run</var>
+<status status="PASS" start="2024-06-06T13:01:12.202685" elapsed="0.000800"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.203924" elapsed="0.000330"/>
+</kw>
+<var name="${option}">--disable-background-networking</var>
+<status status="PASS" start="2024-06-06T13:01:12.203676" elapsed="0.000676"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.204802" elapsed="0.000326"/>
+</kw>
+<var name="${option}">--disable-extensions</var>
+<status status="PASS" start="2024-06-06T13:01:12.204548" elapsed="0.000675"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T13:01:12.205613" elapsed="0.000364"/>
+</kw>
+<var name="${option}">disable-features=VizDisplayCompositor</var>
+<status status="PASS" start="2024-06-06T13:01:12.205387" elapsed="0.000740"/>
+</iter>
+<var>${option}</var>
+<value>@{options_list}</value>
+<status status="PASS" start="2024-06-06T13:01:12.197130" elapsed="0.009076"/>
+</for>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:01:12.206869" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:02:01.650138" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-06-06T13:02:01.649397" elapsed="0.000894"/>
+</kw>
+<msg time="2024-06-06T13:02:01.650711" level="FAIL">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2024-06-06T13:01:12.206517" elapsed="49.448021">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:02:01.655014" elapsed="0.000079"/>
+</kw>
+<arg>${PMS_URL}</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<status status="FAIL" start="2024-06-06T13:01:12.193731" elapsed="49.461679">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T13:02:01.655891" elapsed="0.000086"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:02:01.656447" elapsed="0.000067"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:01:12.192978" elapsed="49.463763">ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:02:01.657550" elapsed="0.000106"/>
+</kw>

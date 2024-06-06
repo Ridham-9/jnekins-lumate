@@ -9,6 +9,6 @@ def copy_to_clipboard(text):
     with open('/tmp/clipboard.txt', 'w') as f:
         f.write(text)
 
-# def paste_from_clipboard():
-#     with open('/tmp/clipboard.txt', 'r') as f:
-#         return f.read()
+def paste_from_clipboard():
+    with open('/tmp/clipboard.txt', 'r') as f:
+        return f.read()

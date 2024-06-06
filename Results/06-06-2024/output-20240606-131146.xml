@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T13:11:46.210020" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:11:46.424069" level="FAIL">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</msg>
+<arg>${PMS_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument(${CHROME_OPTIONS})</arg>
+<arg>executable_path=${CHROME_DRIVER_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-06T13:11:46.423628" elapsed="0.000523">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:46.424345" elapsed="0.000032"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:46.424508" elapsed="0.000029"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:11:46.422631" elapsed="0.002020">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:11:46.424966" elapsed="0.000043"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T13:11:46.425342" elapsed="0.000183"/>
+</kw>
+<tag>TC-PMS-001</tag>
+<status status="FAIL" start="2024-06-06T13:11:46.421799" elapsed="0.003850">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</status>
+</test>
+<test id="s1-t2" name="Verify that the user gets redirected to enter OTP page when entered the correct credentials." line="25">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-06T13:11:46.427187" level="FAIL">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</msg>
+<arg>${PMS_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument(${CHROME_OPTIONS})</arg>
+<arg>executable_path=${CHROME_DRIVER_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-06-06T13:11:46.426924" elapsed="0.000306">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:46.427407" elapsed="0.000030"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:46.427559" elapsed="0.000028"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:11:46.426573" elapsed="0.001112">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</status>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<status status="NOT RUN" start="2024-06-06T13:11:46.428033" elapsed="0.000054"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>Almost There</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:46.428314" elapsed="0.000038"/>
+</kw>
+<tag>TC-PMS-005</tag>
+<status status="FAIL" start="2024-06-06T13:11:46.426038" elapsed="0.002528">Keyword 'SeleniumLibrary.Open Browser' got unexpected named argument 'executable_path'.</status>
+</test>
+<test id="s1-t3" name="Verify the clinician Home Page" line="31">
+<kw name="Enter OTP and Submit it" owner="lumate1Resource">
+<kw name="Wait for OTP Email" owner="lumate1Resource">
+<kw name="Open Mailbox" owner="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" start="2024-06-06T13:11:46.430086" elapsed="1.652728"/>
+</kw>
+<kw name="Wait For Email" owner="ImapLibrary2">
+<var>${email_index}</var>
+<arg>sender=${SENDER_USERNAME}</arg>
+<arg>status=UNSEEN</arg>
+<arg>timeout=300</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<status status="FAIL" start="2024-06-06T13:11:48.083965" elapsed="5.975901">Execution terminated by signal</status>
+</kw>
+<kw name="Get Email Body" owner="ImapLibrary2">
+<var>${email_body}</var>
+<arg>${email_index}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.061381" elapsed="0.000312"/>
+</kw>
+<kw name="Get Regexp Matches" owner="String">
+<var>${otp}</var>
+<arg>${email_body}</arg>
+<arg>\\b\\d{6}\\b</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.062907" elapsed="0.000284"/>
+</kw>
+<kw name="Delete Email" owner="ImapLibrary2">
+<arg>${email_index}</arg>
+<doc>Delete email on given ``email_index``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.064438" elapsed="0.000193"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>OTP received: ${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.065353" elapsed="0.000143"/>
+</kw>
+<return>
+<value>${otp}[3]</value>
+<status status="NOT RUN" start="2024-06-06T13:11:54.065788" elapsed="0.000134"/>
+</return>
+<var>${otp}</var>
+<status status="FAIL" start="2024-06-06T13:11:46.429809" elapsed="7.636557">Execution terminated by signal</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${OTP_CLICK}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.067071" elapsed="0.000142"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${OTP_CLICK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.067854" elapsed="0.000137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${OTP_PAGE}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.068689" elapsed="0.000191"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${OTP_PMS}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.069488" elapsed="0.000133"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${OTP_PMS}</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.070397" elapsed="0.000155"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${VALIDATE_OTP_PMS}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.071151" elapsed="0.000128"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.071836" elapsed="0.000127"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${error_exists}</var>
+<arg>Page Should Contain</arg>
+<arg>Incorrect OTP is provided. Try resending OTP.</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.072730" elapsed="0.000142"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${error_exists}</arg>
+<arg>Enter OTP And Submit It</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.073564" elapsed="0.000100"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOMEPAGE_PMS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.074083" elapsed="0.000093"/>
+</kw>
+<status status="FAIL" start="2024-06-06T13:11:46.429436" elapsed="7.645031">Execution terminated by signal</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TO-DO_HOME}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.075547" elapsed="0.000191"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${TO-DO_HOME}</arg>
+<arg>TO DO's</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.076660" elapsed="0.000166"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${APPOINTMENT_HOME}</arg>
+<arg>Appointments</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-06-06T13:11:54.077762" elapsed="0.000177"/>
+</kw>
+<tag>TC-APP-001</tag>
+<status status="FAIL" start="2024-06-06T13:11:46.428918" elapsed="7.649788">Execution terminated by signal</status>
+</test>
+<test id="s1-t4" name="Verify the Calender &amp; appointments screen" line="38">
+<tag>robot:exit</tag>
+<tag>TC-APP-002</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.079564" elapsed="0.001298">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t5" name="Verify the create an appointment button" line="48">
+<tag>robot:exit</tag>
+<tag>TC-APP-003</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.081732" elapsed="0.001068">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t6" name="Verify View Patient" line="53">
+<tag>robot:exit</tag>
+<tag>TC-PCV-001</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.083559" elapsed="0.001088">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t7" name="Verify Edit Patient" line="59">
+<tag>robot:exit</tag>
+<tag>TC-PCV-002</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.085518" elapsed="0.000990">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t8" name="Verify the Basic details screen given under the Demographic section" line="68">
+<tag>robot:exit</tag>
+<tag>TC-PCV-003</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.087291" elapsed="0.001384">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t9" name="Verify billing tab" line="77">
+<tag>robot:exit</tag>
+<tag>TC-PCV-004</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.089382" elapsed="0.001051">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t10" name="Change billing status" line="89">
+<tag>robot:exit</tag>
+<tag>TC-PCV-005</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.091119" elapsed="0.001075">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t11" name="Verify patient signup" line="103">
+<tag>robot:exit</tag>
+<tag>TC-PATIENT-001</tag>
+<tag>test:retry(2)</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.093048" elapsed="0.001216">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t12" name="Add consent forms" line="111">
+<tag>robot:exit</tag>
+<tag>TC-PATIENT-002</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.094949" elapsed="0.000903">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t13" name="Bill payment" line="119">
+<tag>robot:exit</tag>
+<tag>TC-PATIENT-003</tag>
+<status status="FAIL" start="2024-06-06T13:11:54.096528" elapsed="0.000908">Test execution stopped due to a fatal error.</status>
+</test>
+<status status="FAIL" start="2024-06-06T13:11:46.210860" elapsed="7.887665"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="13" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="3" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
+<stat pass="0" fail="1" skip="0">TC-APP-001</stat>
+<stat pass="0" fail="1" skip="0">TC-APP-002</stat>
+<stat pass="0" fail="1" skip="0">TC-APP-003</stat>
+<stat pass="0" fail="1" skip="0">TC-PATIENT-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PATIENT-002</stat>
+<stat pass="0" fail="1" skip="0">TC-PATIENT-003</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-002</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-003</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-004</stat>
+<stat pass="0" fail="1" skip="0">TC-PCV-005</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-001</stat>
+<stat pass="0" fail="1" skip="0">TC-PMS-005</stat>
+<stat pass="0" fail="1" skip="0">test:retry(2)</stat>
+</tag>
+<suite>
+<stat pass="0" fail="13" skip="0" id="s1" name="lumateTest">lumateTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

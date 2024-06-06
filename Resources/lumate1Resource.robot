@@ -12,19 +12,27 @@ Resource   ../Locators/lumate1Locator.robot
 *** Keywords ***
 
 Open PMS url on browser
-    Open Browser With Options    ${PMS_URL}   ${CHROME_OPTIONS}
+#    Open Browser With Options   ${PMS_URL}    chrome   options=add_argument(${CHROME_OPTIONS})    executable_path=${CHROME_DRIVER_PATH}
+    Open Chrome Browser
     Maximize Browser Window
     Wait Until Element Is Visible    ${LOGIN_PAGE_PMS}    15s
 
-Open Browser With Options
-    [Arguments]    ${url}    ${options}
-    ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    ${options_list}=    Split String    ${options}    ${SPACE}
-    FOR    ${option}    IN    @{options_list}
-        Call Method    ${chrome options}    add_argument    ${option}
-    END
-    Create WebDriver    Chrome    options=${chrome options}
-    Go To    ${url}
+#Open Browser With Options
+#    [Arguments]    ${url}    ${options}
+#    ${chrome options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+#    ${options_list}=    Split String    ${options}    ${SPACE}
+#    FOR    ${option}    IN    @{options_list}
+#        Call Method    ${chrome options}    add_argument    ${option}
+#    END
+#    Create WebDriver    Chrome    options=${chrome options}
+#    Go To    ${url}
+
+Open Chrome Browser
+    [Documentation]    Open Chrome browser with specific options
+    Set Environment Variable    webdriver.chrome.driver    ${CHROME_DRIVER_PATH}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    ${CHROME_OPTIONS}
+    Open Browser    ${PMS_URL}    chrome    options=${options}
 
 Fill the credentials and login
     Wait Until Element Is Visible    ${USERNAME_PATH_PMS}    15s
@@ -41,7 +49,7 @@ Enter OTP and Submit it
     Click Element    ${OTP_CLICK}
     Wait Until Element Is Visible    ${OTP_PAGE}    ${TIMEOUT}
     wait until element is visible    ${OTP_PMS}    ${TIMEOUT}
-#    Press Keys    ${OTP_PMS}    CTRL+V
+    Press Keys    ${OTP_PMS}    CTRL+V
     Input Text    ${OTP_PMS}    ${otp}
 #    Click Element    ${OTP_PMS}
 #    CustomKeywords.Paste From Clipboard

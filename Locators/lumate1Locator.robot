@@ -6,6 +6,7 @@ ${Browser}                  chrome
 ${TIMEOUT}                  35s
 ${TIMEOUT_40}               40s
 ${CHROME_OPTIONS}           --headless    --no-sandbox    --disable-dev-shm-usage    --disable-gpu    --remote-debugging-port=9222    --disable-software-rasterizer    --no-first-run    --disable-background-networking    --disable-extensions    disable-features=VizDisplayCompositor
+${CHROME_DRIVER_PATH}       /usr/bin/chromedriver
 ${PMS_URL}                  https://qa-pms.lumatehealth.com/
 ${USERNAME_PMS}             kalpesh
 ${PASSWORD_PMS}             Test1234!
@@ -28,6 +29,7 @@ ${LOGIN_PAGE_PMS}                    xpath://*[@class="welcome-text"]
 ${REMEMBER_ME_PMS}                   xpath://*[@class="check remember-check"]
 ${LOGIN_BTN_PMS}                     xpath://*[@class="mat-focus-indicator auth-form-btn mat-raised-button mat-button-base mat-primary"]
 ${VALIDATE_OTP_PMS}                  xpath://*[@class="mat-focus-indicator auth-form-btn mat-flat-button mat-button-base mat-primary"]
+${sidemenu}                          xpath://*[@id="collapseSidemenu"]
 ${HOMEPAGE_PMS}                      xpath://*[@class="content-block p-a-25 overflow-y-auto"]
 ${OTP_PMS}                           xpath://*[@class="otp-input ng-pristine ng-valid ng-star-inserted ng-touched"]
 ${OTP_PAGE}                          xpath://*[@class="login-heading"]

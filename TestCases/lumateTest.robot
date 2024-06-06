@@ -38,7 +38,7 @@ Verify the clinician Home Page
 Verify the Calender & appointments screen
     [Tags]    TC-APP-002
     lumate1Resource.Wait Until The Update Icon Disappear
-    Click Element    collapseSidemenu
+    Click Element    ${sidemenu}
     Wait until element is visible    ${APPOINTMENT_SEC}
     Click Element     ${APPOINTMENT_SEC}
     lumate1Resource.Wait Until The Update Icon Disappear
@@ -80,7 +80,9 @@ Verify billing tab
     lumate1Resource.Wait Until The Update Icon Disappear
     Patient Edit Details Screen
     lumate1Resource.Wait Until The Update Icon Disappear
+    lumate1Resource.Wait Until The Update Icon Disappear
     Wait Until Element Is Visible    ${BILLING_SEC}    ${TIMEOUT}
+    lumate1Resource.Wait Until The Update Icon Disappear
     Click Element    ${BILLING_SEC}
     Element Should Be Visible    ${BILLING_VIEW}
     lumate1Resource.Wait Until The Update Icon Disappear
