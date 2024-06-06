@@ -6,7 +6,6 @@ ${Browser}                  chrome
 ${TIMEOUT}                  35s
 ${TIMEOUT_40}               40s
 ${CHROME_OPTIONS}           --headless    --no-sandbox    --disable-dev-shm-usage    --disable-gpu    --remote-debugging-port=9222    --disable-software-rasterizer    --no-first-run    --disable-background-networking    --disable-extensions    disable-features=VizDisplayCompositor
-#${CHROME_OPTIONS}           --no-sandbox    --disable-dev-shm-usage    --headless
 ${PMS_URL}                  https://qa-pms.lumatehealth.com/
 ${USERNAME_PMS}             kalpesh
 ${PASSWORD_PMS}             Test1234!

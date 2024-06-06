@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-06-06T12:45:03.628003" rpa="false" schemaversion="5">
+<suite id="s1" name="lumateTest" source="/home/ridham/PycharmProjects/jnekins-lumate/TestCases/lumateTest.robot">
+<test id="s1-t1" name="Verify that the user is able to Log in to the Portal with correct credentials" line="19">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser With Options" owner="lumate1Resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T12:45:03.781904" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f27d504ad00&gt;</msg>
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.781450" elapsed="0.000505"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-06T12:45:03.782441" level="INFO">${options_list} = ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--remote-debugging-port=9222', '--disable-software-rasterizer', '--no-first-run', '--disable-background-networking', '--disa...</msg>
+<var>${options_list}</var>
+<arg>${options}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.782185" elapsed="0.000302"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.782968" elapsed="0.000223"/>
+</kw>
+<var name="${option}">--headless</var>
+<status status="PASS" start="2024-06-06T12:45:03.782813" elapsed="0.000449"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.783518" elapsed="0.000233"/>
+</kw>
+<var name="${option}">--no-sandbox</var>
+<status status="PASS" start="2024-06-06T12:45:03.783384" elapsed="0.000429"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.784060" elapsed="0.000224"/>
+</kw>
+<var name="${option}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2024-06-06T12:45:03.783925" elapsed="0.000421"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.784581" elapsed="0.000222"/>
+</kw>
+<var name="${option}">--disable-gpu</var>
+<status status="PASS" start="2024-06-06T12:45:03.784457" elapsed="0.000413"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.785108" elapsed="0.000189"/>
+</kw>
+<var name="${option}">--remote-debugging-port=9222</var>
+<status status="PASS" start="2024-06-06T12:45:03.784984" elapsed="0.000368"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.785569" elapsed="0.000176"/>
+</kw>
+<var name="${option}">--disable-software-rasterizer</var>
+<status status="PASS" start="2024-06-06T12:45:03.785454" elapsed="0.000361"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.786055" elapsed="0.000182"/>
+</kw>
+<var name="${option}">--no-first-run</var>
+<status status="PASS" start="2024-06-06T12:45:03.785939" elapsed="0.000359"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.786508" elapsed="0.000177"/>
+</kw>
+<var name="${option}">--disable-background-networking</var>
+<status status="PASS" start="2024-06-06T12:45:03.786399" elapsed="0.000340"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.786976" elapsed="0.000178"/>
+</kw>
+<var name="${option}">--disable-extensions</var>
+<status status="PASS" start="2024-06-06T12:45:03.786839" elapsed="0.000370"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.787422" elapsed="0.000186"/>
+</kw>
+<var name="${option}">disable-features=VizDisplayCompositor</var>
+<status status="PASS" start="2024-06-06T12:45:03.787309" elapsed="0.000361"/>
+</iter>
+<var>${option}</var>
+<value>@{options_list}</value>
+<status status="PASS" start="2024-06-06T12:45:03.782608" elapsed="0.005104"/>
+</for>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:03.788140" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-06-06T12:45:03.787867" elapsed="1.243248"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:05.034435" level="INFO">Opening url 'https://qa-pms.lumatehealth.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-06T12:45:05.033168" elapsed="2.724138"/>
+</kw>
+<arg>${PMS_URL}</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<status status="PASS" start="2024-06-06T12:45:03.780062" elapsed="3.977480"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-06T12:45:07.757840" elapsed="0.055359"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T12:45:07.813533" elapsed="3.628960"/>
+</kw>
+<status status="PASS" start="2024-06-06T12:45:03.779537" elapsed="7.663173"/>
+</kw>
+<kw name="Fill the credentials and login" owner="lumate1Resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_PATH_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.443844" elapsed="0.021566"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:11.466057" level="INFO">Typing text 'kalpesh' into text field 'xpath://*[@id="mat-input-0"]'.</msg>
+<arg>${USERNAME_PATH_PMS}</arg>
+<arg>${USERNAME_PMS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.465733" elapsed="0.145391"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:11.611935" level="INFO">Typing password into text field 'xpath://*[@id="mat-input-1"]'.</msg>
+<arg>${PASSWORD_PATH_PMS}</arg>
+<arg>${PASSWORD_PMS}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.611522" elapsed="0.087506"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REMEMBER_ME_PMS}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.699465" elapsed="0.020160"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:11.720234" level="INFO">Clicking element 'xpath://*[@class="check remember-check"]'.</msg>
+<arg>${REMEMBER_ME_PMS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.719959" elapsed="0.038417"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:11.758829" level="INFO">Clicking button 'xpath://*[@class="mat-focus-indicator auth-form-btn mat-raised-button mat-button-base mat-primary"]'.</msg>
+<arg>${LOGIN_BTN_PMS}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.758613" elapsed="0.059572"/>
+</kw>
+<status status="PASS" start="2024-06-06T12:45:11.443296" elapsed="0.375086"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.819038" elapsed="0.064991"/>
+</kw>
+<tag>TC-PMS-001</tag>
+<status status="PASS" start="2024-06-06T12:45:03.778556" elapsed="8.105786"/>
+</test>
+<test id="s1-t2" name="Verify that the user gets redirected to enter OTP page when entered the correct credentials." line="25">
+<kw name="Open PMS url on browser" owner="lumate1Resource">
+<kw name="Open Browser With Options" owner="lumate1Resource">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-06-06T12:45:11.888595" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f27d5010fa0&gt;</msg>
+<var>${chrome options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.887963" elapsed="0.000707"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-06-06T12:45:11.889507" level="INFO">${options_list} = ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--remote-debugging-port=9222', '--disable-software-rasterizer', '--no-first-run', '--disable-background-networking', '--disa...</msg>
+<var>${options_list}</var>
+<arg>${options}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.889022" elapsed="0.000561"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.890308" elapsed="0.000366"/>
+</kw>
+<var name="${option}">--headless</var>
+<status status="PASS" start="2024-06-06T12:45:11.890068" elapsed="0.000718"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.891196" elapsed="0.000333"/>
+</kw>
+<var name="${option}">--no-sandbox</var>
+<status status="PASS" start="2024-06-06T12:45:11.890979" elapsed="0.000652"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.892046" elapsed="0.000394"/>
+</kw>
+<var name="${option}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2024-06-06T12:45:11.891833" elapsed="0.000721"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.892976" elapsed="0.000356"/>
+</kw>
+<var name="${option}">--disable-gpu</var>
+<status status="PASS" start="2024-06-06T12:45:11.892749" elapsed="0.000684"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.893828" elapsed="0.000422"/>
+</kw>
+<var name="${option}">--remote-debugging-port=9222</var>
+<status status="PASS" start="2024-06-06T12:45:11.893616" elapsed="0.000752"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.894798" elapsed="0.000346"/>
+</kw>
+<var name="${option}">--disable-software-rasterizer</var>
+<status status="PASS" start="2024-06-06T12:45:11.894561" elapsed="0.000689"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.895659" elapsed="0.000413"/>
+</kw>
+<var name="${option}">--no-first-run</var>
+<status status="PASS" start="2024-06-06T12:45:11.895439" elapsed="0.000811"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.896712" elapsed="0.000385"/>
+</kw>
+<var name="${option}">--disable-background-networking</var>
+<status status="PASS" start="2024-06-06T12:45:11.896479" elapsed="0.000734"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.897651" elapsed="0.000365"/>
+</kw>
+<var name="${option}">--disable-extensions</var>
+<status status="PASS" start="2024-06-06T12:45:11.897421" elapsed="0.000709"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>${option}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.898562" elapsed="0.000420"/>
+</kw>
+<var name="${option}">disable-features=VizDisplayCompositor</var>
+<status status="PASS" start="2024-06-06T12:45:11.898327" elapsed="0.000787"/>
+</iter>
+<var>${option}</var>
+<value>@{options_list}</value>
+<status status="PASS" start="2024-06-06T12:45:11.889758" elapsed="0.009444"/>
+</for>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:11.899970" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-06-06T12:45:11.899535" elapsed="1.913051"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-06T12:45:13.816711" level="INFO">Opening url 'https://qa-pms.lumatehealth.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-06T12:45:13.815108" elapsed="1.726056"/>
+</kw>
+<arg>${PMS_URL}</arg>
+<arg>${CHROME_OPTIONS}</arg>
+<status status="PASS" start="2024-06-06T12:45:11.887136" elapsed="3.654345"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
