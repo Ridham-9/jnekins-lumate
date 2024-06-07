@@ -13,7 +13,8 @@ Resource   ../Locators/lumate2Locator.robot
 
 Open LUMCARE url on browser
 #    Open Browser With Options    ${P_PORTAL_URL}    ${CHROME_OPTIONS}
-    Open Chrome Browser
+ #   Open Chrome Browser
+    Web.Open Browser    ${P_PORTAL_URL}    ${Browser}      options=add_argument("--no-sandbox"); add_argument("--ignore-certificate-errors")
     Maximize Browser Window
     Wait Until Element Is Visible    ${LOGIN_PAGE_P_PORTAL}    15s
 
