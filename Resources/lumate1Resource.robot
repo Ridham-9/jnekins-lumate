@@ -14,7 +14,7 @@ Resource   ../Locators/lumate1Locator.robot
 Open PMS url on browser
 #    Open Browser With Options   ${PMS_URL}    chrome   options=add_argument(${CHROME_OPTIONS})    executable_path=${CHROME_DRIVER_PATH}
  #   Open Chrome Browser
-    Open Browser    ${PMS_URL}    ${Browser}      options=add_argument("--no-sandbox"); add_argument("--ignore-certificate-errors")
+    Open Browser    ${PMS_URL}    ${Browser}      options=add_argument("--no-sandbox"); add_argument("--ignore-certificate-errors"); add_argument("--disable-dev-shm-usage")
     Maximize Browser Window
     Wait Until Element Is Visible    ${LOGIN_PAGE_PMS}    15s
 
